@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <center>
+        <label for="">Vowel</label> <br>
+        <input type="text" placeholder="Enter Vowel" id="i1">
+        <br><br>
+    </center>
+    <center>
+        <h1 id="ans"></h1>
+    </center>
+    
+</body>
+</html>
+<script>
+     
+    let v=document.getElementById("i1").value;
+    
+
+ 
+ 
+    if(v=="")
+ {
+    document.getElementById("ans").innerHTML=""
+ }
+ else{
+    if(v=="a" || v=="e" || v=="i" || v=="o" || v=="u" || v=="A" || v=="E" || v=="I" || v=="O" || v=="U")
+    {
+        document.getElementById("ans").innerHTML="a vowel"
+    }
+    else{
+        document.getElementById("ans").innerHTML="not a vowel"
+    }
+ }
+</script>
