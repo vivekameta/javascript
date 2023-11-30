@@ -4,16 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> 2 </title>
-	<!-- <style type="text/css">
-		
-	</style> -->
+
 </head>
 <body>
 	<center>
 		<label>Enter Amount : </label>
 		<br>
 		<br>
-		<input type="text" id="i1">
+		<input type="text" id="i1" placeholder="Enter Amount">
 		<br>
 		<br>
 		<h1 id="ans"></h1>
@@ -22,37 +20,41 @@
 </html>
 <script type="text/javascript">
 	let a = document.getElementById("i1").value
+	let b = document.getElementById("i1").value
+	let c = document.getElementById("i1").value
+	let d = document.getElementById("i1").value
+	let e = document.getElementById("i1").value
 	let price
 	let finalprice
 
-	if(a > 0 && a < 10000)
+	if(a > 0 && a <= 10000)
 	{
 		price = (a*5)/100;
 		finalprice = a - price
 		document.getElementById("ans").innerHTML = +finalprice
 	}
-	else if(a >= 10001 && a < 20000)
+	else if(b >= 10000 && b <= 20000)
 	{
-		price = (a*10)/100;
-		finalprice = a - price
+		price = (b*10)/100;
+		finalprice = b - price
 		document.getElementById("ans").innerHTML = +finalprice
 	}
-	else if(a >= 20001 && a < 30000)
+	else if(c >= 20000 && c <= 30000)
 	{
-		price = (a*15)/100;
-		finalprice = a - price
+		price = (c*15)/100;
+		finalprice = c - price
 		document.getElementById("ans").innerHTML = +finalprice
 	}
-	else if(a >= 30001  && a < 40000)
+	else if(d >= 30000  && d <= 40000)
 	 {
-		price = (a*20)/100;
-		finalprice = a - price
+		price = (d*20)/100;
+		finalprice = d - price
 		document.getElementById("ans").innerHTML = +finalprice
 	}
-	else(a >= 40001)
+	else if(e >= 40000)
 	{
-		price = (a*25)/100;
-		finalprice = a - price
+		price = (e*25)/100;
+		finalprice = e - price
 		document.getElementById("ans").innerHTML = +finalprice
 	}
 </script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <center>
+        <label for="">Enter Time of Day </label> <br>
+        <input type="text" placeholder="Enter Time of Day " id="i1">
+        <br><br>
+    </center>
+    <center>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a=document.getElementById("i1").value;
+
+    if(a=="")
+    {
+        document.getElementById("ans").innerHTML=""
+    }
+    else
+    {
+        if(a>=5 && a<=12)
+        {
+            document.getElementById("ans").innerHTML="Good morning"
+        }
+        else if(a>=13 && a<=18)
+        {
+            document.getElementById("ans").innerHTML="Good afternoon"
+        }
+        else{
+        
+            document.getElementById("ans").innerHTML="Good night"
+        }
+    }
+</script>
