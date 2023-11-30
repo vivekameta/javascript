@@ -7,9 +7,9 @@
 </head>
 <body>
     <center>
-        <label for="">temperature</label> <br>
-        <input type="text" placeholder="Enter temperature" id="i1">
-        <br><br>
+        <label for="">Score</label><br>
+        <input type="text" placeholder="Enter your score " id="i1">
+        <br> <br>
     </center>
     <center>
         <h1 id="ans"></h1>
@@ -17,23 +17,36 @@
 </body>
 </html>
 <script>
+    let score=document.getElementById("i1").value;
 
-    let a=document.getElementById("i1").value;
-    
-    
- if(a=="")
- {
-    document.getElementById("ans").innerHTML=""
- }
- else
- {
-    if(80<=a)
+    if(score=="")
     {
-        document.getElementById("ans").innerHTML="It's hot!"
+        document.getElementById("ans").innerHTML=""
     }
     else{
-        document.getElementById("ans").innerHTML="It's cool!"
+        
+        if(score>=90 && score<=100)
+    {
+        document.getElementById("ans").innerHTML="grade= A " +score; 
     }
- }
- 
-</script>
+    else if(score>=80 && score<90)
+    {
+        document.getElementById("ans").innerHTML="grade= B " +score; 
+    }
+    else if(score>=70 && score<80)
+    {
+        document.getElementById("ans").innerHTML="grade= C " +score; 
+    }
+    else if(score>=60 && score<70)
+    {
+        document.getElementById("ans").innerHTML="grade= D " +score; 
+    }
+    else if(score>=0 && score<60)
+    {
+        document.getElementById("ans").innerHTML="grade= F " +score; 
+    } 
+
+    }
+
+    
+ </script>

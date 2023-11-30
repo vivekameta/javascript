@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 2 </title>
+	<!-- <style type="text/css">
+		
+	</style> -->
 </head>
 <body>
-    <center>
-        <label for="">Age</label> <br>
-        <input type="text" placeholder="Enter Age" id="i1">
-        <br><br>
-    </center>
-    <center>
-        <h1 id="ans"></h1>
-    </center>
+	<center>
+		<label>Enter Amount : </label>
+		<br>
+		<br>
+		<input type="text" id="i1">
+		<br>
+		<br>
+		<h1 id="ans"></h1>
+	</center>
 </body>
 </html>
-<script>
+<script type="text/javascript">
+	let a = document.getElementById("i1").value
+	let price
+	let finalprice
 
-    let a=document.getElementById("i1").value;
-    if(a=="")
- {
-    document.getElementById("ans").innerHTML=""
- }
- else
- {
-    if(18>a)
-    {
-        document.getElementById("ans").innerHTML="a minor"
-    }
-    else if(65<=a)
-    {
-        document.getElementById("ans").innerHTML="senior citizen"
-    }
-    else{
-        document.getElementById("ans").innerHTML="a adult"
-    }
- }
-
-   
+	if(a > 0 && a < 10000)
+	{
+		price = (a*5)/100;
+		finalprice = a - price
+		document.getElementById("ans").innerHTML = +finalprice
+	}
+	else if(a >= 10001 && a < 20000)
+	{
+		price = (a*10)/100;
+		finalprice = a - price
+		document.getElementById("ans").innerHTML = +finalprice
+	}
+	else if(a >= 20001 && a < 30000)
+	{
+		price = (a*15)/100;
+		finalprice = a - price
+		document.getElementById("ans").innerHTML = +finalprice
+	}
+	else if(a >= 30001  && a < 40000)
+	 {
+		price = (a*20)/100;
+		finalprice = a - price
+		document.getElementById("ans").innerHTML = +finalprice
+	}
+	else(a >= 40001)
+	{
+		price = (a*25)/100;
+		finalprice = a - price
+		document.getElementById("ans").innerHTML = +finalprice
+	}
 </script>

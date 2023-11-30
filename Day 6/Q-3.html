@@ -7,39 +7,41 @@
 </head>
 <body>
     <center>
-        <label for="">Number</label> <br>
-        <input type="text" placeholder="Enter Number" id="i1">
+        <label for="">Enter your age for purchasing ticket </label>
+        <br>
+        <input type="text" placeholder="Enter your age" id="i1">
         <br><br>
+
     </center>
     <center>
         <h1 id="ans"></h1>
     </center>
-    
 </body>
 </html>
 <script>
-     let num=document.getElementById("i1").value;
-     if(num=="")
- {
-    document.getElementById("ans").innerHTML=""
- }
- else
- {
-    if(num==0)
-     {
-        document.getElementById("ans").innerHTML="Zero"
-     }
-     else if(num>0)
-     {
-        document.getElementById("ans").innerHTML="Positive"
-     }
-     else
-     {
-        document.getElementById("ans").innerHTML="Negative"
-     }
- }
+    let a=document.getElementById("i1").value;
 
-    
+    if(a=="")
+    {
+      document.getElementById("ans").innerHTML=""
+    }
+    else
+    {
+        
+    if(a>=0 && a<=12)
+    {
+     document.getElementById("ans").innerHTML="Ticket price of child= $8 ";
+    }   
+    else if(a>=13 && a<=64)
+    {
+        document.getElementById("ans").innerHTML="Ticket price of adult= $15 ";
+    }
+    else if(a>=65)
+    {
+        document.getElementById("ans").innerHTML="Ticket price of Senior= $10 ";
+    }
 
+    }
 
+   
 </script>
