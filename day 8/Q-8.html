@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 8 </title>
+	<style type="text/css">
+		label{
+			font-family: cursive;
+			font-size: 30px;
+		}
+		#i1{
+			height: 50px;
+			width: 40%;
+			border: 2px solid black;
+			text-align: center;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<label>Enter Number : </label>
+		<br>
+		<input type="text" id="i1">
+		<br>
+		<br>
+		<h1 id="ans"></h1>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+	let a = document.getElementById("i1").value
+
+	if(a=="")
+	{
+		document.getElementById("ans").innerHTML = ""
+	}
+	else
+	{
+		if(a > 0)
+		{
+			document.getElementById("ans").innerHTML = "Positive"
+		}
+		else if(a < 0)
+		{
+			document.getElementById("ans").innerHTML = "Negative"
+		}
+		else{
+			document.getElementById("ans").innerHTML = "Zero"
+		}
+	}
+</script>

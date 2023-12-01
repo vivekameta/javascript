@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 6 </title>
+</head>
+<body>
+<center>
+	<label>Enter Frist Number : </label>
+	<br>
+	<br>
+	<input type="text" id="i1">
+	<br>
+	<br>
+	<label>Enter Second Number : </label>
+	<br>
+	<br>
+	<input type="text" id="i2">
+	<br>
+	<br>
+	<label>Enter Third Number : </label>
+	<br>
+	<br>
+	<input type="text" id="i3">
+	<br>
+	<br>
+	<label>Enter Fourth Number : </label>
+	<br>
+	<br>
+	<input type="text" id="i4">
+	<br>
+	<br>
+	<h1 id="ans"></h1>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+	let a = document.getElementById("i1").value
+	let b = document.getElementById("i2").value
+	let c = document.getElementById("i3").value
+	let d = document.getElementById("i4").value
+
+	if(a=="" || b=="" || c=="" || d=="")
+	{
+		document.getElementById("ans").innerHTML=""
+	}
+	else
+	{
+		if(a<b)
+		{
+			if(a>c)
+			{
+				if(c>d)
+				{
+    	            document.getElementById("ans").innerHTML="D Is Min"
+				}
+				else
+				{
+    	            document.getElementById("ans").innerHTML="C Is Min"	
+				}
+			}
+			else
+			{
+    	        document.getElementById("ans").innerHTML="A Is Min"
+			}
+		}
+		else
+		{
+			if(b>c)
+			{
+				if(c>d)
+				{
+    	            document.getElementById("ans").innerHTML="D Is Min"	
+				}
+				else
+				{
+    	            document.getElementById("ans").innerHTML="C Is Min"	
+				}	
+			}
+			else
+			{
+    	            document.getElementById("ans").innerHTML="B Is Min"	
+			}
+		}
+	}
+</script>
