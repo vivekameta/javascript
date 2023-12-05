@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>5</title>
+        <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Student grades</h1>
+            <hr>
+        <input type="text" id="i1" placeholder="Enter student grades">
+        <br>
+        <h1 id="ans"></h1>
+
+        </center>
+        
+    </body>
+    </html>
+    <script>
+    let a=document.getElementById("i1").value;
+    let stu;
+if(a=="")
+{
+    stu==""
+}
+else
+{
+    switch(a)
+    {  
+        case "A" : stu ="Excellent!"
+        break;
+        case "B" :stu ="Well done!"
+
+        break;
+        case "C" : stu ="Good job!"
+        
+        break;
+
+        case "D" : stu="You got a D"  
+        break;
+
+        case "F" : stu="Unfortunately, you failed."
+        break;
+     
+        
+    }
+    document.getElementById("ans").innerHTML="" +stu;
+}
+    
+    </script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> languages</h1>
+        <hr>
+       <input type="text" id="i1" placeholder="Enter  languages">
+       <br>
+       <h1 id="ans"></h1>
+
+    </center>
+    
+</body>
+</html>
+<script>
+  let a=document.getElementById("i1").value;
+let msg;
+if(a==="")
+{
+    // document.getElementById("ans").innerHTML=" "
+    msg=" "
+}
+else
+{
+    switch(a)
+  {  
+    case "English" : msg ="Hello!"
+     break;
+     case "Spanish" :msg ="¡Hola"
+
+     break;
+     case "French" : msg ="Bonjour!"
+     
+     break;
+    
+     default : ""
+     break;
+    
+  }
+ document.getElementById("ans").innerHTML= msg;
+}
+ 
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> Day of the Week </h1>
+        <hr>
+       <input type="text" id="i1" placeholder="Enter">
+       <br>
+       <h1 id="ans"></h1>
+
+    </center>
+    
+</body>
+</html>
+<script>
+  let a=document.getElementById("i1").value;
+let dayname;
+  switch(parseInt(a))
+  {  
+    case 1 : dayname ="monday "
+     dayname+="It's the start of the workweek"
+     break;
+     case 2:dayname ="Tuesday "
+     dayname+="It's some other day."
+     break;
+     case 3: dayname ="Wednesday "
+     dayname+="It's some other day."
+     break;
+    case 4 : dayname ="Thusday "
+    dayname+="It's some other day."
+     break;
+     case 5:dayname ="Friday "
+     dayname+="It's almost the weekend!"
+     break;
+     case 6: dayname ="saturday "
+     dayname+="It's the weekend !"
+     break;
+     case 7: dayname ="Sunday "
+     dayname+="It's the weekend !"
+     break;
+     default : ""
+     break;
+    
+  }
+ console.log("Today is : ",dayname);
+</script>

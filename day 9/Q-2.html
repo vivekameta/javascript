@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+<center>
+    <h1> Calculator </h1>
+    <hr>
+   <input type="number" id="i1" placeholder="Enter First value">
+   <br> <br>
+   <input type="number" id="i2" placeholder="Enter Secound value">
+   <br> <br>
+   <input type="text" id="i3" placeholder="Enter choise">
+
+</center>
+</body>
+</html>
+<script>
+    let a=document.getElementById("i1").value;
+    let b=document.getElementById("i2").value;
+    let c=document.getElementById("i3").value;
+    let value;
+
+    switch(c)
+    {
+      case "+" : value = +a + +b
+      break
+      case "-" : value =+a - +b
+      break
+      case "*" : value =+a * b
+      break
+      case "/" : value =+a / b
+      break
+      default : ""
+     break
+    
+    }
+    console.log("ans is :",value);
+    
+</script>
