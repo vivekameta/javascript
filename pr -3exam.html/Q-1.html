@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <center>
+        <label for="">Enter number of guests </label> <br>
+        <input type="text" id="i1" placeholder="Enter value">
+    </center>
+    
+</body>
+</html>
+<script>
+    let num=document.getElementById("i1").value;
+
+    if(num==0)
+    {
+        console.log("It seems like no one is attending the reception. Are you sure?");
+    }
+    else if(num==1)
+    {
+        console.log("Great! There is one guest attending the reception.");
+    }
+    else if(num==2)
+    {
+        console.log("Perfect! You and one other person will be attending the reception");
+    }
+    else if(num>2)
+    {
+        console.log("guests will be attending the reception");
+        
+    }
+    else{
+        console.log("Please enter a valid number of guests");
+    }
+
+    
+    
+</script>

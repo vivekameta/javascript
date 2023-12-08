@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <center>
+        <label for="">Enter number</label><br>
+        <input type="text" placeholder="Enter value" id="i1">
+    </center>
+    
+</body>
+</html>
+<script>
+    let num=document.getElementById("i1").value;
+
+    let f=0;
+    let s=1;
+    let next;
+
+    for(i=0;i<=num;i++)
+    {
+        if(i<=1)
+        {
+            next=i;
+        }
+        else
+        {  next=f+s;
+            f=s;
+            s=next;
+        }
+        console.log(next);
+    }
+</script>
