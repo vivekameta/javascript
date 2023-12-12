@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <center>
+        <input type="text" id="i1" placeholder="Enter the value"> <br>
+
+    </center>
+    
+</body>
+</html>
+<script>
+    let n=document.getElementById("i1").value;
+    sum=1;
+    let i;
+
+    function productofdigits()
+    {
+        for(i=0;i<n.length;i++)
+        {
+            sum*=n[i]
+        }
+        console.log(parseInt(sum))
+    }
+    productofdigits()
+</script>

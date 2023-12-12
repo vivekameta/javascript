@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+    <title>3</title>
 </head>
 <body>
     <center>
-        <label for="">Enter number</label><br>
         <input type="text" placeholder="Enter value" id="i1">
+
     </center>
-    
 </body>
 </html>
 <script>
     let n=document.getElementById("i1").value;
+    fact=1;
+    let i;
 
-    let o=5;
-    let p=6;
-    let next;
 
-    for(i=0;i<=n;i++)
+    function  factorial()
     {
-        if(i<=1)
+        for(i=1;i<=n;i++)
         {
-            next=i;
+            fact*=i;
         }
-        else
-        {  next=o+p;
-            o=p;
-            p=next;
-        }
-        console.log(next);
+        console.log(parseInt(fact))
     }
+    factorial()
+
 </script>
