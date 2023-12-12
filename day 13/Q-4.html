@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <center>
+        <input type="text" id="i1" placeholder="Enter b value"> <br>
+        <input type="text" id="i2" placeholder="Enter h value"> <br>
+
+        
+        
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let A;
+    let b=document.getElementById("i1").value;
+    let h=document.getElementById("i2").value;
+
+    function triangle(b,h)
+    {
+        A = 1/2 * (b * h);
+        return A;
+    }
+    console.log(triangle(b,h));
+</script>
