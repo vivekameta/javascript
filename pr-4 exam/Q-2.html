@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let arr=[10,11,12,25,50,60,70,80,90,25,30,20]
+    
+    let num=arr.filter((el)=>{
+        return el%2==0
+    })
+    console.log(num);
+
+    let squares=num.map((a)=>{
+        return a*a
+    })
+    console.log(squares);
+
+    let sum =squares.reduce((a,c)=>{
+        return a+c
+    })
+    console.log(sum)
+</script>
+
