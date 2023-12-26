@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let book = [
+        {title : "The History of Tom Jones",
+        author : "Henry Fielding",
+        price : 50,
+        quantityAvailable : 0 },
+
+        {title : "Pride and Prejudice",
+        author : "Jane Austen",
+        price : 15,
+        quantityAvailable : 5 },
+
+        {title : "David Copperfield ",
+        author : "Charles Dickens",
+        price : 80,
+        quantityAvailable : 8 },
+
+        {title : "Madame Bovary ",
+        author : "Gustave Flaubert",
+        price : 120,
+        quantityAvailable : 2 },
+
+    ]
+ 
+    let arry=[];
+
+    for(let i=0;i<book.length;i++)
+    {
+        if(book[i].price<60 && book[i].quantityAvailable!=0)
+        {
+            arry.push(book[i].title)
+        }
+    }
+    console.log(arry)
+</script>
