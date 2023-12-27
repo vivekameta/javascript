@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+    <script>
+
+
+
+        let library = [
+            {title : "The History of Tom Jones",
+            author : "Henry Fielding",
+            year : 2004 },
+
+            {title : "Pride and Prejudice",
+            author : "Jane Austen",
+        year : 1990 },
+
+            {title : "David Copperfield ",
+            author : "Charles Dickens",
+            year :2005 },
+
+            {title : "Madame Bovary ",
+            author : "Gustave Flaubert",
+        year : 1998},
+
+        ]
+
+    
+
+    function a(){
+        
+        let arry=[];
+
+        for(let i=0;i<library.length;i++)
+        {
+            if(library[i].year<2000)
+            {
+                arry.push(library[i].title)
+            }
+        }
+        return arry
+
+    }
+    console.log(a())
+ 
+
+   
+</script>
