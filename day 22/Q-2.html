@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <p class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+
+    </p>
+    <p class="odd">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+    </p>
+    <p class="odd">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+    </p>
+   <button onclick="chgp1()">Click here....!</button>
+
+    <hr><hr><hr>
+    <p class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+        </p>
+    <p class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+        </p>
+    <p class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda. Quibusdam <br>
+        dolores molestias delectus reiciendis cum. Cum labore cumque quidem natus cupiditate? Eum dignissimos <br>
+         iure laboriosam velit maiores vel ipsum. <br>
+        </p>
+        <button onclick="chgp2()">Click here....!</button>
+
+</body>
+</html>
+<script>
+
+    function chgp1()
+    {
+        var a1=document.querySelectorAll('.odd')
+
+        for(let i=0;i<a1.length;i++)
+        {
+            a1[i].style.color='red'
+            a1[i].style.background='blue'
+        }
+    }
+    
+    function chgp2()
+    {
+        var a2=document.querySelectorAll('.even')
+
+        for(let i=0;i<a2.length;i++)
+        {
+            a2[i].style.color='yellow'
+            a2[i].style.background='black'
+        }
+    }
+</script>

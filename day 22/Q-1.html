@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h1 >First</h1>
+    <h1 >secound</h1>
+    <h1 >third</h1>
+
+    <hr>
+
+
+ <h3>1st </h3>
+ <h3>2nd</h3>    
+ <h3>3rd</h3>    
+<hr>
+
+<h5>Queery1</h5>
+<h5>Queery2</h5>
+<h5>Queery3</h5>
+<hr>
+
+<button onclick="chgbtn1()">Change to red</button>
+<button onclick="chgbtn2()">Change to green</button>
+<button onclick="chgbtn3()">Change to blue</button>
+
+<hr>
+<hr>
+<hr>
+
+
+<h1 class="green">First</h1>
+<h1 class="green">secound</h1>
+<h1 class="green">third</h1>
+
+<hr>
+
+
+<h3 class="blue">1st </h3>
+<h3 class="blue">2nd</h3>    
+<h3 class="blue">3rd</h3>    
+<hr>
+
+<h5 class="red">Queery1</h5>
+<h5 class="red">Queery2</h5>
+<h5 class="red">Queery3</h5>
+<hr>
+
+<button onclick="chgbtn4()">Change to green</button>
+<button onclick="chgbtn5()">Change to green</button>
+<button onclick="chgbtn6()">Change to blue</button>
+
+
+
+</body>
+</html>
+<script>
+    function chgbtn1()
+    {
+        var head1=document.querySelector('h1')
+
+        head1.style.color="red"
+        head1.style.backgroundColor="yellow"
+    }
+
+    
+
+    function chgbtn2()
+    {  
+        var head2=document.querySelectorAll('h3')
+        for(let i=0;i<head2.length;i++)
+        {
+          head2[i].style.color="green"
+          head2[i].style.backgroundColor="black"
+        }
+    }
+
+    function chgbtn3()
+    {
+        var head3=document.querySelectorAll('h5')
+
+        for(let i=0;i<head3.length;i++)
+        {
+            head3[i].style.color="blue"
+            head3[i].style.backgroundColor="grey"
+        }
+    }
+
+    
+    function chgbtn4()
+    {
+        var head4=document.querySelectorAll('.green')
+
+        for(let i=0;i<head4.length;i++)
+        {
+            head4[i].style.color="green"
+        
+        }
+    }
+
+    
+
+    function chgbtn5()
+    {  
+        var head5=document.querySelectorAll('.blue')
+        for(let i=0;i<head5.length;i++)
+        {
+          head5[i].style.color="blue"
+         
+        }
+    }
+
+    function chgbtn6()
+    {
+        var head6=document.querySelectorAll('.red')
+
+        for(let i=0;i<head6.length;i++)
+        {
+            head6[i].style.color="red"
+           
+        }
+    }
+</script>

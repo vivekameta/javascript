@@ -16,11 +16,11 @@
         let library = [
             {title : "The History of Tom Jones",
             author : "Henry Fielding",
-            year : 2004 },
+            year : 1947 },
 
             {title : "Pride and Prejudice",
             author : "Jane Austen",
-        year : 1990 },
+            year : 1990 },
 
             {title : "David Copperfield ",
             author : "Charles Dickens",
@@ -28,27 +28,28 @@
 
             {title : "Madame Bovary ",
             author : "Gustave Flaubert",
-        year : 1998},
+            year : 1998},
 
         ]
 
     
 
-    function a(){
+    function a(library,year){
         
         let arry=[];
-
+        
         for(let i=0;i<library.length;i++)
         {
-            if(library[i].year<2000)
+            if(library[i].year<year)
             {
                 arry.push(library[i].title)
             }
         }
-        return arry
+        return arry;
 
     }
-    console.log(a())
+    let ans=a(library,2000);
+    console.log(ans)
  
 
    
