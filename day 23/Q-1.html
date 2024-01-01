@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <center>
+    <h1> Calculator</h1>
+    <label for="">First Value</label> <br>
+    <input type="text" placeholder="Enter value" id="i1">
+    <br>
+    <label for="">Secound Value</label> <br>
+    <input type="text" placeholder="Enter value" id="i2">
+    <br>
+
+    
+    <label for="">Third value</label> <br>
+    <input type="text" placeholder="Enter value" id="i3">
+    <br>
+    <label for="">Fourth value</label> <br>
+    <input type="text" placeholder="Enter value" id="i4">
+    <br> <br> <br>
+
+    <h1 id="ans"></h1>
+
+
+    <hr><hr>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="multi()">Multiplication</button>
+    <button onclick="div()">Divide</button>
+    
+
+
+
+
+  </center>
+
+  
+
+
+    
+</body>
+</html>
+<script>
+  
+  
+  function add()
+  {
+    let fi=document.getElementById("i1").value;
+    let se=document.getElementById("i2").value;
+    let th=document.getElementById("i3").value;
+    let fo=document.getElementById("i4").value;
+
+    let a=+fi+ +se+ +th+ +fo;
+
+    document.getElementById("ans").innerHTML= "Fourth number of addition = " +a
+  }
+
+  function sub()
+  {
+    let fi=document.getElementById("i1").value;
+    let se=document.getElementById("i2").value;
+    let th=document.getElementById("i3").value;
+    let fo=document.getElementById("i4").value;
+
+    let b=+fi- +se- +th- +fo
+
+    document.getElementById("ans").innerHTML="Fourth number of Substric = " +b
+  }
+
+  function multi()
+  {
+    let fi=document.getElementById("i1").value;
+    let se=document.getElementById("i2").value;
+    let th=document.getElementById("i3").value;
+    let fo=document.getElementById("i4").value;
+
+    let c =+fi * se * th * fo;
+    document.getElementById("ans").innerHTML="Fourth number of multipication = " +c
+  }
+
+  function div()
+  {
+    let fi=document.getElementById("i1").value;
+    let se=document.getElementById("i2").value;
+   
+
+    let d = fi / se;
+    document.getElementById("ans").innerHTML="Two number of multipication = " +d
+  }
+</script>

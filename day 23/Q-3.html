@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contant Manipulation</title>
+</head>
+<body>
+    <h1 id="firstname">Your FirstName</h1>
+
+    <div id="lastname"> Your LastName  </div>
+
+    <p id="fullname">Your First&LastName</p>
+    <hr/>
+   
+    <button onclick="setFirstName()">FIRSTNAME</button>
+    
+        <button onclick="setLastName()">LASTNAME</button>
+     
+      <button onclick="setFullName()">FIRSTNAME NAME</button> 
+    
+        <button onclick="resetDefaults()">RESET DEFAULTS</button>
+</body>
+</html>
+<script type="text/javascript">
+ 
+ let first="Vivek"
+ let last =" Ameta"
+    function setFirstName() {
+          
+  
+     // Change the content of h1 to your first name
+     
+    
+
+     document.getElementById("firstname").innerHTML= first
+
+       
+  
+    }
+  
+     
+      function setLastName() {
+      
+  
+         // Change the content of div to your last name
+         
+    
+         document.getElementById("lastname").innerHTML= last
+  
+       }
+  
+       
+  
+    function setFullName() {
+     
+  
+          // Change the content of p to your full name (firstname - lastname)
+      
+        var full= first+last
+
+        document.getElementById("fullname").innerHTML= full
+  
+  
+     }
+  
+       
+  
+  
+    function resetDefaults(){
+        
+  
+       // reset the firstname, lastname, and fullname to empty values 
+
+      
+      
+       document.getElementById("firstname").innerHTML=" "
+       document.getElementById("lastname").innerHTML=" "
+       document.getElementById("fullname").innerHTML= " "
+
+
+  
+          }
+   
+  
+    </script>
