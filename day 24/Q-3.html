@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+ age=prompt("Enter the age ");
+    function vaildAge(age)
+    {
+         if(age<18)
+         {
+            throw new Error("Not eligible to vote");
+         }
+         else{
+            console.log("You are eligible to vote")
+         }
+    }
+    try{
+        vaildAge(age);
+    }
+    catch(e)
+    {
+    console.log("Error : ",e.message)
+    }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function validString(str)
+    {
+         if(str==="")
+         {
+            throw new Error("String must contain some characters");
+
+         }
+         else{
+            console.log("Valid string ",str);
+         }
+    }
+
+    try{
+         validString("");
+    }
+    catch(an)
+    {
+        console.log("Error : ",an.message)
+    }
+</script>
