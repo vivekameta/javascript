@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+
+    <style>
+        input{
+            width: 30%;
+            height: 40px;
+            border: 2px solid  black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        label{
+            font-size: 20px;
+        }
+        button{
+            width: 15%;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            
+        }
+        body{
+            font-family: monospace;
+        }
+        span{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Registration Form</h1> <br>
+
+        <form action="" id="signup">
+
+            <label for="">Name</label><br>
+            <input type="text" id="na"><br>
+            
+            <br><br><br>
+            <label for="">Email</label><br>
+            <input type="text" id="em"> <br>
+            <!-- <span id="err2"></span> -->
+            <br><br><br>
+            <label for="">Phone Number</label><br>
+            <input type="text" id="pm"> <br>
+            <!-- <span id="err3"></span> -->
+            <br><br><br>
+            <label for="">Password</label><br>
+            <input type="password" id="ps"> <br>
+            <!-- <span id="err"></span> -->
+            <br><br><br>
+
+            <label for="">Confirm Password</label><br>
+            <input type="password" id="cps"> <br>
+            <!-- <span id="err"></span> -->
+            <br><br><br>
+
+            <button type="submit" id="sb">Submit</button>
+            <br><br>
+
+            <span id="err"></span>
+                        
+        </form>
+    </center>
+    
+</body>
+</html>
+<script>
+
+    document.getElementById("signup").onsubmit = function(event){
+        try{ 
+            var name = document.getElementById("na").value
+            var number=document.getElementById("em").value
+            var email=document.getElementById("pm").value
+            var pass=document.getElementById("ps").value
+            var confirm=document.getElementById("cps").value
+
+            if(/\d/.test(name)){
+                throw new Error("Invalid name")
+            }
+            if(!/^\d{10}$/.test(number)){
+                throw new Error("Please enter valid mobile number")
+            }
+            if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)){
+                throw new Error("Please enter valid email")
+            }
+            if(pass!=confirm){
+                throw new Error("Password not matching")
+            }
+            alert("Detailed saved successfull")
+        }
+        catch(error){
+            event.preventDefault()
+            document.getElementById("err").innerText=error.message
+        }
+    }
+
+
+
+
+    
+</script>
