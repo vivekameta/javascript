@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 1 </title>
+
+	<!--Jquery CDN-->
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<!--Jquery CDN-->
+    <style>
+         input{
+            width: 30%;
+            height: 40px;
+            border: 2px solid  black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        label{
+            font-size: 20px;
+        }
+        button{
+            width: 15%;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            
+        }
+        body{
+            font-family: monospace;
+        }
+        span{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<center>
+	<form id="myform">
+		<label>Enter Name : </label>
+		<br>
+		<input type="text" placeholder="Enter Name" id="name">
+		<br>
+		<br>
+		<label>Enter Email : </label>
+		<br>
+		<input type="text" placeholder="Enter Email" id="email">
+		<br>
+		<br>
+		<label>Enter Mobile : </label>
+		<br>
+		<input type="text" placeholder="Enter Mobile" id="mobile">
+		<br>
+		<br>
+		<label>Enter Password : </label>
+		<br>
+		<input type="text" placeholder="Enter Password" id="pw">
+		<br>
+		<br>
+		<label>Enter Confirm Password : </label>
+		<br>
+		<input type="text" placeholder="Enter Confirm Password" id="cpw">
+		<br>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+		
+	isValid = true;
+	$(document).ready(function(){
+		$("#myform").submit
+		(
+			function(e)
+			{
+				var name = $("#name").val();
+				if(name==="")
+				{
+					isValid = false;
+					alert("Enter Your Name");
+				}
+
+				var email = $("#email").val();
+				if(email==="")
+				{
+					isValid = false;
+					alert("Enter Your Email");
+				}
+				else if(!email.endsWith("@gmail.com"))
+				{
+					isValid = false;
+					alert("Invalid Ending Of Email");
+				}
+
+				var phnrgx = /^\d{10}$/;
+				var mobile = $("#mobile").val();
+				if(mobile === "" || !phnrgx.test(mobile))
+				{
+					isValid = false;
+
+					alert("Enter valid Mobile Number")
+				} 
+
+				var password = $("#pw").val();
+				var confirm = $("#cpw").val();
+				if(password != confirm)
+				{	
+					isValid = false;
+					alert("Entered Password Is Not Match");
+				}
+				else if(!name==="" || !email==="" || email.endsWith("@gmail.com") || !mobile === "" || phnrgx.test(mobile) || password == confirm)
+				{
+					alert("Detailed Saved Successfully");
+				}
+			}
+		)
+	})
+
+</script>
