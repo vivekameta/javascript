@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Animals{
+        makesound()
+        {
+            return "Sound..."
+        }
+    }
+    class Dog extends Animals{
+        makesound()
+        {
+            return "Bhau-Bhau"
+        }
+    }
+
+    class Cat extends Animals{
+        makesound()
+        {
+            return "Meow-Meow"
+        }
+    }
+
+    class Bird extends Animals{
+        makesound()
+        {
+            return "Chi-Chi"
+        }
+    }
+
+    const myanimal=new Dog;
+    const myanimal1=new Cat;
+    const myanimal2=new Bird;
+    
+    console.log(myanimal.makesound());
+    console.log(myanimal1.makesound());
+    console.log(myanimal2.makesound()); 
+
+
+</script>
