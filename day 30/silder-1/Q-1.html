@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+
+    <title>Slider</title>
+    
+</head>
+<body>
+
+    <div class="header">
+        <div class="sub-header">
+            <div class="logo">
+                <img src="images/fkheaderlogo_exploreplus-44005d.svg" alt="">
+            </div>
+            <div class="in">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Search for Products ,Brands and More">
+            </div>
+            <div class="icon">
+                <div class="i1">
+                    <i class="fa-regular fa-circle-user"></i> &nbsp;&nbsp;Login
+                </div>
+                <div class="i1">
+                    <i class="ri-shopping-cart-line"></i> &nbsp;&nbsp;Cart
+                </div>
+                <div class="i1" id="ii1">
+                    <i class="ri-store-2-line"></i> &nbsp;&nbsp;Become a Seller
+                </div>
+
+
+
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="shop">
+        <div class="inshop">
+            <div class="shop-1">
+                <div class="pro1">
+                    <img src="images/gro.png" alt="">
+                    <!-- <h4>Grocery</h4> -->
+                    <p style="font-size: 15px;">Grocery</p>
+                </div>
+                <div class="pro1">
+                    <img src="images/mob.png" alt="">
+                    <p style="font-size: 15px;">Mobiles</p>
+
+                </div>
+
+                <div class="pro1">
+                    <img src="images/fash.png" alt="">
+                    <p style="font-size: 15px;">Fashion</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/elec.png" alt="">
+                    <p style="font-size: 15px;">Electronic</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/home.jpg" alt="">
+                    <p style="font-size: 15px;">Home&Furniture</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/applila.jpg" alt="">
+                    <p style="font-size: 15px;">Appliances</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/travel.png" alt="">
+                    <p style="font-size: 15px;">Travel</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/toys.png" alt="">
+                    <p style="font-size: 15px;">beauty,toys&more</p>
+
+                </div>
+                <div class="pro1">
+                    <img src="images/two wheelers.png" alt="">
+                    <p style="font-size: 15px;">Two wheelers</p>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    
+
+<!-- !........Silder........! -->
+
+    
+    <div class="offers">
+        <div class="sub-offers">
+            <img src="images/img1.jpg" alt="" class="i2">
+            <img src="images/img2.jpg" alt="" class="i2">
+            <img src="images/img5.jpg" alt="" class="i2">
+            <img src="images/img4.jpg" alt="" class="i2">
+            <img src="images/img3.jpg" alt="" class="i2">
+            <img src="images/img6.jpg" alt="" class="i2">
+
+            <i class="ri-arrow-left-s-line"></i>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    let slider=document.querySelectorAll(".i2")
+    let silderIndex=0;
+
+    function showsilders(index)
+    {
+         for(let i=0;i<slider.length;i++)
+         {
+            slider[i].style.display="none"
+            slider[i].style.
+            
+         }
+         slider[index].style.display="block"
+    }
+
+   
+
+    function startsilder()
+    {
+        setInterval(()=>{
+            showsilders(silderIndex)
+            silderIndex++
+            
+            if(silderIndex>=slider.length)
+            {
+                silderIndex=0
+            }
+     
+        },2500);
+    }
+    startsilder()
+
+    showsilders(silderIndex)
+    
+</script>

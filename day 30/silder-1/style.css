@@ -1,0 +1,181 @@
+/* body{
+    background-color: #F1F2F4;
+} */
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+   
+
+}
+.header{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+}
+.sub-header{
+    width: 92%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.logo{
+    width: 13%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    padding-right: 80px;
+  
+}
+.in {
+    width: 60%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.in input{
+    width: 98%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    padding-left: 35px;
+    position: relative;
+    z-index: -1;
+    border: none;
+    background-color: #F0F5FF;
+}
+.in i{
+    position: absolute;
+    left: 263px;
+    font-size: 15px;
+  
+}
+.icon{
+    width: 45%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.i1{
+    width: 25%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    
+    
+}
+#ii1{
+    width: 30%;
+}
+.i1 i{
+    font-size: 22px;
+}
+
+.shop{
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F2F4;
+}
+.inshop{
+    width: 96%;
+    height: 120px;
+    /* border: 1px solid black; */
+    background-color:white;
+    display: flex;
+    justify-content: center;
+
+}
+.shop-1{
+    width: 81%;
+    height: 120px;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.pro1{
+    width: 12%;
+    height: 120px;
+    /* border: 1px solid black; */
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.pro1 p{
+    padding-top: 6px;
+}
+.offers{
+    width: 100%;
+    height: 295px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F2F4;
+
+}
+.sub-offers{
+
+    width: 96%;
+    height: 290px;
+    /* border: 1px solid black; */
+    background-color: white;
+    position: relative;
+}
+.sub-offers img{
+    width: 100%;
+    height: 100%;
+    
+}
+.sub-offers .ri-arrow-left-s-line{
+    position: absolute;
+    top: 50px;
+    /* border: 1px solid black; */
+    height: 90px;
+    padding-top: 35px;
+    margin-top: 42px;
+    text-align: center;
+    font-size: 25px;
+    width: 2.8%;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: white;
+    color: gray;
+}
+.sub-offers .ri-arrow-right-s-line{
+    position: absolute;
+    top: 20px;
+    left: 97.2%;
+    top: 50px;
+    /* border: 1px solid black; */
+    height: 90px;
+    padding-top: 35px;
+    margin-top: 42px;
+    text-align: center;
+    font-size: 25px;
+    width: 2.8%;
+    background-color: white;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    color: gray;
+    
+}
