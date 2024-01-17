@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+<body>
+    <center>
+         
+        <h1>CREAT AN ACCOUNT</h1>
+         <br>
+        <form action="" id="login">
+   
+           <label for="">Enter Email</label><br>
+           <input type="text" id="loginemail"> <br> <br>
+   
+           <label for="">Enter phone</label><br>
+           <input type="text" id="loginph"> <br> <br>
+           
+           <label for="">Enter password</label><br>
+           <input type="password" id="loginpass">
+            <br><br>
+   
+            <button type="submit">Submit</button>
+   
+        </form>
+       </center>
+    
+</body>
+</html>
+<script>
+
+    let login=document.getElementById("login")
+
+    login.addEventListener("submit",()=>{
+
+        event.preventDefault()
+
+        let loginemail=document.getElementById("loginemail").value;
+        let loginpass=document.getElementById("loginpass").value;
+        let loginph=document.getElementById("loginph").value; 
+
+        let storedmine=JSON.parse(localStorage.getItem("mine")) || []
+
+        let mine=storedmine.find((av)=>loginemail===av.mail && loginpass===av.password && loginph===av.phone)
+
+        if(mine)
+        {
+            alert("Loged In..!")
+        }
+        else{
+            alert("Increate email and password..!");
+        }
+    });
+</script>

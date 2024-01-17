@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://fakestoreapi.com/products">
+    <style>
+
+        #main{
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            text-align: center;
+        }
+
+        #photo{
+   width: 300px;
+   height: 300px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+</body>
+</html>
+<script>
+    let data = [
+        {    id	:1,
+            title	:"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            price : 109.95,
+            image :	"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        
+        },
+        {  id:2,
+            title	:"Mens Casual Premium Slim Fit T-Shirts ",
+            price :55.99,
+            image : "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+
+        },
+        {
+            id :3,
+            title :	"John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+            price :	695,
+            image :"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"              
+        },
+        {
+            id:4,
+            title :	"White Gold Plated Princess",
+            price :	9.99,
+            image:	"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+        }
+    ]
+
+    function displayData(data)
+    {
+        data.map((el)=>{
+           
+            let div=document.createElement("div")
+
+           let pic=document.createElement("img")
+
+           pic.setAttribute("src",el.image)
+           pic.setAttribute("id","photo")
+
+          let name=document.createElement("h4")
+           
+          name.innerHTML=el.title
+
+          let pr=document.createElement("h2")
+
+          pr.innerText="Rs. "+el.price
+
+
+          let btn=document.createElement("button")
+          btn.innerHTML="Add to Cart"
+
+          div.append(pic,name,pr,btn)
+
+          document.querySelector("#main").append(div)
+
+
+
+           
+
+        })
+    }
+
+    displayData(data)
+
+
+</script>

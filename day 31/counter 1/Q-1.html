@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter 1</title>
+    <style>
+  body{
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .a1{
+    width: 50%;
+    height: 100px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+   
+    align-items: center;
+    
+  }
+  #b1{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    
+  }
+  #b2{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+  }
+  #b3{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+  }
+  #b4{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+  }
+  #c1{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+  }
+  #c2{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+  }
+  #c3{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+  }
+  #c4{
+    width: 15%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    text-align: center;
+  }
+.a2{
+    width: 50%;
+    height: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+   
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <h1>Get 40% Off On Holidays Sales!</h1>
+    <br>
+    <div class="a1">
+        
+       <div id="b1">
+        <h1 id="h1">
+           02
+        </h1>
+        
+       </div>
+       <div id="b2">
+        <h1 id="h2">
+            24
+        </h1>
+       </div>
+       <div id="b3">
+        <h1 id="h3">
+            60
+        </h1>
+       </div>
+       <div id="b4">
+        <h1 id="h4">
+            00 <br>
+            
+        </h1>
+
+        
+       </div>
+       
+   
+       
+
+       
+    </div>
+    <div class="a2">
+        <div id="c1">
+        
+        <h2>Days</h2>
+        </div>
+        <div id="c2">
+            <h2>Hours</h2>
+        </div>
+        <div id="c3">
+            <h2>Minutes</h2>
+        </div>
+        <div id="c4">
+        <h2>Secound</h2>
+ 
+         
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+//     let h1=document.querySelector("h1")
+
+//     let count=11
+
+//    let stop= setInterval(()=>{
+//         count--
+//         h1.innerText=count
+//         if(count==0){
+//             clearInterval(stop)
+//         }
+//     },2000)
+
+
+let b1=document.querySelector("#h4")
+let count1=60
+
+let s1=setInterval(()=>{
+   count1--
+   b1.innerHTML=count1
+   if(count1==0)
+   {
+     count1=60
+   }
+},1000);
+
+let b2=document.querySelector("#h3")
+let count2=60
+
+let s2=setInterval(()=>{
+     count2--
+     b2.innerHTML=count2
+     if(count2==0)
+     {
+        count2=60
+     }
+    
+},60000);
+
+let b3=document.querySelector("#h2")
+let count3=24;
+
+let s3=setInterval(()=>{
+   count3--
+   b3.innerHTML=count3
+
+   if(count3==0)
+   {
+    count3=24
+   }
+},3600000);
+
+
+let b4=document.querySelector("#h1")
+let count4=2
+
+
+let s4=setInterval(()=>{
+
+    count4--
+    b4.innerHTML=count4
+
+    if(count4==0)
+    {
+     clearInterval(s1)
+     clearInterval(s2)
+      clearInterval(s3)
+      clearInterval(s4)
+
+
+    }
+
+
+
+},86400000)
+
+
+
+
+
+
+</script>

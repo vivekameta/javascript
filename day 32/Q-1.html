@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form </title>
+</head>
+<body>
+    
+    <center>
+         
+     <h1>CREAT AN ACCOUNT</h1>
+      <br>
+     <form action="" id="signup">
+
+        <label for="">Enter Email</label><br>
+        <input type="text" id="email"> <br> <br>
+
+        <label for="">Enter phone</label><br>
+        <input type="text" id="ph"> <br> <br>
+        
+        <label for="">Enter password</label><br>
+        <input type="password" id="pass">
+         <br><br>
+
+         <button type="submit">Submit</button>
+
+     </form>
+    </center>
+</body>
+</html>
+<script>
+
+let signup=document.getElementById("signup")
+
+signup.addEventListener("submit",()=>{
+
+    event.preventDefault()
+
+    let mail=document.getElementById("email").value;
+    let password=document.getElementById("pass").value;
+    let phone=document.getElementById("ph").value;  
+
+     let storedmine=JSON.parse(localStorage.getItem("mine")) || []
+      storedmine.push({mail,password,phone});
+
+      localStorage.setItem("mine",JSON.stringify(storedmine));
+
+      let mine=storedmine.find((el)=>mail==el.mail && el.pa)
+
+})
+
+
+
+</script>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css">
+
+<style>
+        
+        .main{
+            width: 100%;
+            height: 200px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: whitesmoke;
+        }
+        #m1{
+            width: 15%;
+            height: 200px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #m1 i{
+            font-size: 45px;
+            
+        }
+        button{
+            border-radius: 20px;
+            padding: 5px;
+            width: 45%;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+      <div id="m1">
+        <i class="ri-community-line"></i> <br> <br>
+
+    <i style="font-size: 20px;">Real Assets</i><br> <br>
+    <button><span id="a1">3921</span></button>
+      </div>
+      <div id="m1">
+        <i class="ri-book-open-line"></i> <br> <br>
+        <i style="font-size: 20px;">Books</i><br> <br>
+        <button><span id="a2">398</span></button>
+        
+      </div>
+      <div id="m1">
+        <i class="ri-home-office-line"></i> <br> <br>
+        <i  style="font-size: 20px;">Furniture</i>
+ <br> <br>        <button>
+    <span id="a3">1098</span>
+ </button>
+
+      </div>
+      <div id="m1">
+        <i class="ri-artboard-2-line"></i> <br> <br>
+        <i style="font-size: 20px;">Electronics</i> <br> <br>
+        <button>
+            <span id="a4">1229</span>
+        </button>
+
+      </div>
+      <div id="m1">
+        <i class="ri-roadster-line"></i> <br> <br>
+        <i style="font-size: 20px;">Cars</i>
+       <br> <br>  <button>
+        <span id="a5">29810</span>
+       </button>
+
+      </div>
+      <div id="m1">
+        <i class="ri-tent-line"></i> <br> <br>
+        <i style="font-size: 20px;">Others</i>
+     <br> <br>    <button>
+        <span id="a6">219</span>
+     </button>
+
+      </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    
+    let i1=document.querySelector("#a1")
+   count1=0;
+
+  let stop1= setInterval(()=>{
+
+      count1++
+      i1.innerHTML=count1;
+
+      if(count1==3921)
+      {
+        clearInterval(stop1)
+      }
+   });
+
+   let i2=document.querySelector("#a2")
+   count2=0;
+
+  let stop2= setInterval(()=>{
+
+      count2++
+      i2.innerHTML=count2;
+
+      if(count2==398)
+      {
+        clearInterval(stop2)
+      }
+   },120);
+
+   let i3=document.querySelector("#a3")
+   count3=0;
+   
+  let stop3=setInterval(()=>{
+
+    count3++
+    i3.innerHTML=count3
+
+    if(count3==1029)
+    {
+        clearInterval(stop3)
+    }
+   })
+
+   let i4=document.querySelector("#a4")
+   count4=0;
+   
+  let stop4=setInterval(()=>{
+
+    count4++
+    i4.innerHTML=count4
+
+    if(count4==1229)
+    {
+        clearInterval(stop4)
+    }
+   })
+
+
+
+   let i5=document.querySelector("#a5")
+   count5=0;
+   
+  let stop5=setInterval(()=>{
+
+    count5++
+    i5.innerHTML=count5
+
+    if(count5==2918)
+    {
+        clearInterval(stop5)
+    }
+   })
+
+
+   let i6=document.querySelector("#a6")
+   count6=0;
+   
+  let stop6=setInterval(()=>{
+
+    count6++
+    i6.innerHTML=count6
+
+    if(count6==219)
+    {
+        clearInterval(stop6)
+    }
+   },240)
+
+</script>
