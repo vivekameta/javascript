@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+ 
+</head>
+<body>
+    <img src="" alt="" id="pic">
+</body>
+</html>
+<script>
+ 
+ fetch('https://dog.ceo/api/breeds/image/random')
+
+ .then(function(res){
+    return res.json()
+ })
+ .then(function(json){
+      display(json)
+    console.log(json)
+ })
+
+ function display(json)
+ {
+     document.getElementById("pic").src = json.message
+ }
+</script>
