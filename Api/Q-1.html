@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+</head>
+<body>
+    <center>
+        <input type="text" placeholder="Enter city name" id="city">
+        <br> <br>
+        <button onclick="fetchdata()">Search</button>
+
+        <div id="main">
+
+        </div>
+    </center>
+    
+</body>
+</html>
+<script>
+
+// https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}
+
+
+    function fetchdata(){
+
+        let city=document.getElementById("city").value;
+
+        let Api="690da37fd76a4c6a1571383f5b615e95"
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${Api}`)
+
+        .then(function(res){
+
+            return res.json()
+        })
+        .then(function(json){
+            console.log(json)
+            displayWeather(json)
+        })
+    }
+
+    function displayWeather(json)
+    {
+     
+
+        
+
+      let max=document.createElement("h1")
+
+      max.innerHTML=`Maximume=${json.main.temp_max}`
+
+      let min=document.createElement("h1")
+
+      min.innerHTML=`Minimume = ${json.main.temp_min}`
+
+      let wind=document.createElement("h1")
+
+      wind.innerHTML=`Winds = ${json.wind.deg}`
+      
+      let Cloud=document.createElement("h1")
+
+      Cloud.innerHTML=`Cloud = ${json.clouds.all}`
+
+      let sunrise=document.createElement("h1")
+
+      sunrise.innerHTML=`Sunrise = ${json.sys.sunrise}`
+
+
+      let sunset=document.createElement("h1")
+      sunset.innerHTML=`Sunset = ${json.sys.sunset}`
+
+
+
+
+      document.querySelector("#main").append(max,min,wind,Cloud,sunrise,sunset)
+    }
+</script>
+
+<!-- https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -->
