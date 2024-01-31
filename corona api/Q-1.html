@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORONA API</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: green;
+        
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        input{
+            margin-top: 100px;
+            width: 360px;
+            height: 30px;
+           border-radius: 10px;
+
+           border: none;
+        }
+        button{     
+            height: 30px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="container">
+        <input type="text" id="name">
+        <button onclick="fetchdata()">Search</button>
+        <div id="main"></div>
+    </div>
+    </center>
+    
+</body>
+</html>
+<script>
+
+
+    function fetchdata(){
+        document.getElementById("main").innerHTML=""
+        fetch("https://data.covid19india.org/v4/min/data.min.json")
+        .then(function(res){
+         return res.json()
+        })
+        .then(function(json){
+         console.log(json)
+         displayCovidData(json)
+        })
+    }
+    function displayCovidData(json){
+        let cfm = document.createElement("h1")
+        let tcfm = document.createElement("h1")
+        let name=document.getElementById("name").value
+      for(i in json){
+            if(i == name){
+                
+                cfm.innerHTML ="Confirmed Cases = " +json[i].delta.confirmed
+                tcfm.innerHTML="Total Confirmed Cases = "+json[i].total.confirmed
+            }
+      }  
+      document.querySelector("#main").append(cfm,tcfm)
+    }
+</script>
