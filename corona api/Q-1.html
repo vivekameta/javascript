@@ -60,14 +60,17 @@
     function displayCovidData(json){
         let cfm = document.createElement("h1")
         let tcfm = document.createElement("h1")
+       let test=document.createElement("h1")
         let name=document.getElementById("name").value
       for(i in json){
             if(i == name){
                 
                 cfm.innerHTML ="Confirmed Cases = " +json[i].delta.confirmed
                 tcfm.innerHTML="Total Confirmed Cases = "+json[i].total.confirmed
+                test.innerHTML="test = "+json[i].delta7.tested
+
             }
       }  
-      document.querySelector("#main").append(cfm,tcfm)
+      document.querySelector("#main").append(cfm,tcfm,test)
     }
 </script>
