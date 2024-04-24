@@ -309,3 +309,47 @@
 
 
 </script>
+
+
+let stored = JSON.parse(localStorage.getItem("job")) || [];
+let rec = document.querySelector('tbody');
+
+function display(data) {
+    let displayData = data || stored;
+    let a = "";
+    displayData.map((el, i) => {
+        a += `<tr>
+                <th scope="row">${el.name}</th>
+                <td>${el.email}</td>
+                <td>${el.op}</td>
+                <td>${el.code}</td>
+                <td><a href="">Bookmark</a></td>
+                <td><button style="font-size:14px; width:70%;padding:5px; border-radius:10px; background:red; color:white; border:none;" onclick="del(${i})">Remove</button></td>
+              </tr>`;
+    });
+    rec.innerHTML = a;
+}
+
+display();
+
+let sorts = document.getElementById("sort-1");
+
+sorts.addEventListener("change", () => {
+    let select = sorts.value;
+    let selectvalue = [];
+
+    if (select === "az") {
+        selectvalue = stored.slice().sort((a, b) => a.name.localeCompare(b.name));
+    } else if (select === "za") {
+        selectvalue = stored.slice().sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    display(selectvalue);
+});
+
+function del(id) {
+    stored.splice(id, 1);
+    localStorage.setItem("job", JSON.stringify(stored));
+    display();
+}
+

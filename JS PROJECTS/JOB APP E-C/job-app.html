@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job app</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        header{
+            width: 100%;
+            height: 120px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f7f7;
+            border-radius: 150px;
+
+        }
+        nav{
+            width: 80%;
+            height: 100px;
+            /* border: 1px solid black; */
+           
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            line-height: 100px;
+            font-size: 30px;
+            
+            
+        }
+      
+        #main{
+            width: 100%;
+            height: 550px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            background-color: #f9f7f7;
+         
+            border-radius: 60px;
+
+
+        }
+        #j-f{
+            width: 400px;
+            height: 450px;
+            /* border: 1px solid black; */
+            background-color: rgb(255, 254, 254);
+           padding-left: 65px;
+           padding-top: 30px;
+           border-radius: 60px;
+
+            
+        }
+        select{
+            width: 75%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 17px;
+            border: 2px solid gray;
+
+        }
+        input{
+            width: 75%;
+            height: 40px;
+            padding-left: 20px;
+            font-size: 16px;
+            border: 2px solid gray;
+        }
+        button{
+            width: 50%;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 15px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+       nav ul li {
+        list-style: none;
+       }
+       nav ul li a{
+        text-decoration: none;
+       }
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="job-app.html">Applied Jobs</a></li>
+                <li><a href="Bookmark.html" id="bm">Bookmarks</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div id="main">
+    <div id="j-f">
+      
+        <form action="" id="form">
+            
+         <h2 style="font-size: 27px;">Enter Your Application <br> Details</h2>
+  <br>
+         <input type="text" placeholder="Enter the Name" id="name"> <br> <br> 
+
+         <input type="text" placeholder="Enter the email id " id="email"> <br> <br>
+
+         <select name="" id="op">
+            <option value="Frontend">Frontend</option>
+            <option value="backend">backend</option>
+            <option value="Frontend & backend">Frontend & backend</option>
+
+
+         </select> <br> <br>
+   
+         <input type="text" placeholder="Enter the Salary" id="code"> <br> <br>
+
+         <button type="submit">Submit</button>
+             
+        </form>
+
+    </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+let form=document.getElementById("form")
+
+let stored=JSON.parse(localStorage.getItem("job"))||[]
+
+form.addEventListener("submit",()=>{
+
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let op=document.getElementById("op").value;
+   
+    let code=document.getElementById("code").value
+
+    
+
+    stored=JSON.parse(localStorage.getItem("job"))||[]
+
+
+    stored.push({name:name,email:email,op:op,code:code})
+
+
+    localStorage.setItem("job",JSON.stringify(stored))
+
+    alert("Successfully submited")
+
+    display(stored)
+
+
+    
+})
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        header{
+            width: 100%;
+            height: 120px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f7f7;
+            border-radius: 150px;
+
+        }
+        nav{
+            width: 80%;
+            height: 100px;
+            /* border: 1px solid black; */
+           
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            line-height: 100px;
+            font-size: 30px;
+            
+            
+        }
+        nav ul li {
+        list-style: none;
+       }
+       nav ul li a{
+        text-decoration: none;
+       }
+
+        #main1{
+            width: 100%;
+            height: 600px;
+            /* border: 1px solid black; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 30px;
+            background-color: #f9f7f7;
+
+        }
+        #m1{
+            width: 60%;
+            height: 500px;
+            /* border: 1px solid black; */
+        }
+      
+      
+       
+    </style>
+
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="job-app.html">Applied Jobs</a></li>
+                <li><a href="Bookmark.html">Bookmarks</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <select name="" id="sort-1" style="width: 10%; text-align: center;" >
+        
+        <option value="">Sort by Names</option>
+        <option value="az">A - Z</option>
+        <option value="za">Z - A</option>
+
+    </select>
+
+    <select name="" id="sort-2" style="width: 10%; text-align: center;">
+        
+        <option value="">Sort by Salary</option>
+        <option value="high">Price : High - Low</option>
+        <option value="low">Price : Low - High</option>
+
+    </select>
+    
+    <select name="" id="sort-3" style="width: 10%; text-align: center;">
+        
+        <option value="">Filter by Role</option>
+        <option value="Frontend">Frontend</option>
+        <option value="backend">backend</option>
+        <option value="F&d">F & d</option>
+       
+
+
+    </select>
+    
+    
+<div id="main1">
+
+
+
+    <div id="m1">
+
+
+
+          <table class="table table-bordered border-primary">
+            
+        
+          
+            <thead style="border: 2px solid white;text-align: center;">
+              <tr style="background-color: #008080;color: white;border: 2px solid white;">
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Job Applied</th>
+                <th scope="col">Salary expected</th>
+                <th scope="col">Add to bookmark</th>
+
+                
+              </tr>
+            </thead>
+            <tbody id="" style="border: 2px solid gainsboro;text-align: center;">
+              <tr>
+                <th scope="row">abc</th>
+                <td>abc@gmail.com</td>
+                <td>Fronted</td>
+                <td>25 LPA</td>
+                <td><a href="">Bookmark</a></td>
+              
+
+              </tr>
+           
+            </tbody>
+          
+
+          </table>
+
+
+    </div>
+
+    
+
+</div>
+   
+
+</body>
+</html>
+<script>
+    
+
+    let stored = JSON.parse(localStorage.getItem("job")) || [];
+let rec = document.querySelector('tbody');
+
+
+
+
+function display(data) {
+
+
+    let displayData = data || stored;
+
+    let a = "";
+    displayData.map((el, i) => {
+        a += `<tr>
+                <th scope="row">${el.name}</th>
+                <td>${el.email}</td>
+                <td>${el.op}</td>
+                <td>${el.code}</td>
+                <td><a href="" onclick="book(${i})">Bookmark</a></td>
+              </tr>`;
+    });
+    rec.innerHTML = a;
+}
+
+display();
+
+let sorts_1=document.getElementById("sort-1")
+
+sorts_1.addEventListener("change",()=>{
+
+    let select_1=sorts_1.value;
+
+    let select_1_value=[];
+
+
+    if(select_1==="az")
+    {
+        select_1_value=stored.slice().sort((a,b)=>a.name.localeCompare(b.name))
+    }
+    else if(select_1==="za")
+    {
+        select_1_value=stored.slice().sort((a,b)=>b.name.localeCompare(a.name))
+
+    }
+    display(select_1_value)
+
+})
+
+
+let sort_2=document.getElementById("sort-2")
+
+sort_2.addEventListener("change",()=>{
+
+    let select_2=sort_2.value;
+
+    let select_2_value=[];
+
+    if(select_2==="low")
+    {
+        select_2_value=stored.slice().sort((a,b)=>a.code-b.code)
+    }
+    else if(select_2==="high")
+    {
+      select_2_value=stored.slice().sort((a,b)=>b.code-a.code)
+    }
+
+    display(select_2_value)
+
+})
+
+let sort_3=document.getElementById("sort-3")
+
+sort_3.addEventListener("change",()=>{
+
+    let select_3=sort_3.value
+
+    let select_3_value=[];
+
+    if(select_3==="Frontend" || select_3==="F&d")
+    {
+        select_3_value=stored.slice().sort((a,b)=>b.op.localeCompare(a.op))
+    }
+    else if(select_3==="backend"){
+        select_3_value=stored.slice().sort((a,b)=>a.op.localeCompare(b.op))
+  
+    }
+    
+    display(select_3_value)
+
+})
+
+
+ let bookmark = JSON.parse(localStorage.getItem("bookmark")) || [];
+
+
+function book(id)
+{
+    let bokk=stored[id]
+
+    bookmark.push(bokk)
+
+    localStorage.setItem("bookmark",JSON.stringify(bookmark))
+
+    alert("Bookmark is Successfully")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

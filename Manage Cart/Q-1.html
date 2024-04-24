@@ -164,6 +164,8 @@
         <option value="za">Z - A</option>
     </select>
     <br><br>
+
+
     <div id="main">
 
     </div>
@@ -251,6 +253,7 @@
           
           btn.addEventListener("click",function(){
               addTocart(i)
+              
           })
 
           div.append(pic,name,pr,btn)
@@ -268,6 +271,8 @@
 
 
     let sortselect=document.getElementById("sort-select")
+
+    // let s=[]
 
    sortselect.addEventListener("change",()=>{
       
@@ -293,15 +298,34 @@
           }
 
           displayData(selectedValue)
+
+          // s=selectedValue
+          
+          // let so=JSON.parse(localStorage.getItem("so")) || []
+
+          //  so.push(s)
+
+          //  localStorage.setItem("so",JSON.stringify(so))
+          
+
+          // console.log(p)
+          
    })
 
-   function addTocart(index)
+  //  so=JSON.parse(localStorage.getItem("so")) || []
+
+   
+   
+
+ 
+  
+   function addTocart(i)
    {
       // let product=data.filter((el,i)=>{
       //   return i===index
       // })
       
-      let product=data[index]
+      let product=data[i]
 
       let products=JSON.parse(localStorage.getItem("cart")) || []
 

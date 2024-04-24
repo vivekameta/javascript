@@ -117,8 +117,10 @@
 let products = JSON.parse(localStorage.getItem("cart")) || []
 
     function displayCart(){
+
         document.getElementById("cart").innerHTML = ""
-        products.map((el,index,i)=>{
+
+        products.map((el,i)=>{
             let div = document.createElement("div")
             div.setAttribute("id","main")
 
@@ -140,7 +142,7 @@ let products = JSON.parse(localStorage.getItem("cart")) || []
             delBtn.innerHTML = "Delete"
 
             delBtn.addEventListener("click",function(){
-                products.splice(index,1)
+                products.splice(i,1)
                 localStorage.setItem("cart",JSON.stringify(products))
                 displayCart()
             })
@@ -151,5 +153,46 @@ let products = JSON.parse(localStorage.getItem("cart")) || []
     }
     
     displayCart(products)
+
+
+//     let so=JSON.parse(localStorage.getItem("so")) || []
+
+//     function displayCart2(){
+
+// document.getElementById("cart").innerHTML = ""
+
+// so.map((ol,i)=>{
+//     let div = document.createElement("div")
+//     div.setAttribute("id","main")
+
+//     let image = document.createElement("img")
+//     image.setAttribute("src",ol.image)
+//     image.setAttribute("id", "photo")
+
+//     let title = document.createElement("h2")
+//     title.innerHTML=ol.title
+
+//     let price = document.createElement("h3")
+//     price.innerHTML=ol.price
+
+//      let quantity=document.createElement("p")
+     
+//      quantity.innerHTML="Quantity : " +ol.quantity
+
+//     let delBtn = document.createElement("button")
+//     delBtn.innerHTML = "Delete"
+
+//     delBtn.addEventListener("click",function(){
+//         so.splice(i,1)
+//         localStorage.setItem("so",JSON.stringify(products))
+//         displayCart()
+//     })
+
+//     div.append(image, title, price, quantity,delBtn)
+//     document.getElementById("cart").append(div)
+// })
+// }
+
+// displayCart2(so)
 
 </script>
